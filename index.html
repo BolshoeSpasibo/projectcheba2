@@ -1,0 +1,60 @@
+<script>
+  function checkForm(form) {
+
+    var name = form.name.value;
+    var n = name.match(/^[A-Za-zР-пр-џ ]*[A-Za-zР-пр-џ ]+$/);
+    if (!n) {
+      alert("The name is entered incorrectly, please correct the error");
+      return false;
+    }
+    var phone = form.phone.value;
+    var p = phone.match(/^[0-9+][0-9- ]*[0-9- ]+$/);
+    if (!p) {
+      alert("The phone number is entered incorrectly");
+      return false;
+    }
+
+    var mail = form.mail.value;
+    var m = mail.match(/^[A-Za-z0-9][A-Za-z0-9\._-]*[A-Za-z0-9_]*@([A-Za-z0-9]+([A-Za-z0-9-]*[A-Za-z0-9]+)*\.)+[A-Za-z]+$/);
+  if (!m) {
+    alert("The e-mail address is entered incorrectly, please correct the error
+");
+    return false;
+  }
+  return	true;
+  }
+	
+</script>
+<form  enctype="multipart/form-data" method="post" action="project2.php">
+  <link rel="stylesheet" type="text/css" href="/project2.css" />	
+
+			<div class="left">
+			<div class="right">
+      <label for="message"> Comment: </label>
+      <textarea rows="7" cols="50" name="message"> </textarea>
+
+      <label for="surname"> Surname: </label>
+      <input maxlength="30" type="text" name="surname" />
+
+      <label for="name"> Name: </label>
+      <input maxlength="30" type="text" name="name" />
+
+      <label for="middle_name"> Middle name: </label>
+      <input maxlength="30" type="text" name="middle_name" />
+
+      <label for="adress"> Adress: </label>
+      <input maxlength="30" type="text" name="adress" />
+
+      <label for="mail"> E-mail: </label>
+      <input maxlength="30" type="text" name="mail" />
+
+      <label for="phone"> Phone: </label>
+      <input maxlength="30" type="text" name="phone" />
+
+			<input type="file" name="file">
+
+      <input type="submit" value="Submit" />
+
+    </div>
+
+</form>

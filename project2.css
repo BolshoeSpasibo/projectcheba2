@@ -1,0 +1,49 @@
+form
+ {
+   background: #ffffff;
+   padding: 20px;
+}
+form .left, form .right
+ {
+   display: inline-block;
+   vertical-align: top;
+   width: 460px;
+ }
+label
+ {
+   display: block;
+   font-size: 30px;
+   text-align: center;
+   margin: 10px 0px 0px 0px;
+ }
+input, textarea
+ {
+   border: 3px solid #000000;
+   padding: 10px;   
+   font-size: 16px;
+   width: 500px;
+ }
+textarea
+ {
+   height: 200px;
+   margin-bottom: 30px;
+ }
+input[type = "submit"]
+ {
+    width: 152px;
+    float: right;
+    background: #595CF2;
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 27px;
+ }
+  input[type = "file"]
+ {
+   width: 500px;
+    float: left;
+    background: #fff;
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 25px;
+	 
+ }
